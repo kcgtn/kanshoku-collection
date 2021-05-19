@@ -17,21 +17,10 @@
     color: black;
   }
   header {
-    flex:0;
+    flex: 0;
   }
-  header .menu_wrapper .menu {
-    /* background: #f39800; */
-    /* margin-bottom: 30px; */
-    /* font-size: 12px;
-    list-style: none;
-    overflow: hidden;
-    padding: 0 30px; */
-    /* border-radius: 1.5em; */
-    /* margin-bottom: 13em; */
-    /* position: relative; */
-    /* width: 100%; */
-    /* background-color: #444; */
-    /* display: none; */
+  header .menu_wrapper .top-wrapper .h-icon {
+    text-align: center;
   }
   header .menu_wrapper .menu nav {
     margin-bottom: 13em;
@@ -40,15 +29,20 @@
     background-color: #444;
     border-radius: 1.5em;
   }
-  header .menu_wrapper .menu ul {
+  header .menu_wrapper .menu nav ul {
     display: flex;
     justify-content: space-around;
   }
-  header .menu_wrapper .menu ul li {
+  header .menu_wrapper .menu nav ul li:hover .sub-menu {
+    display: block;
+  }
+  header .menu_wrapper .menu nav ul li {
     list-style: none;
     display: inline-block;
+    /* サブメニュー */
+    /* ここまで */
   }
-  header .menu_wrapper .menu ul li a {
+  header .menu_wrapper .menu nav ul li a {
     display: block;
     width: 100%;
     /* font-size: 15px; */
@@ -62,39 +56,34 @@
     padding: 15px 30px;
     color: #fff;
   }
-  header .menu_wrapper .menu ul li a span {
+  header .menu_wrapper .menu nav ul li a span {
     margin-left: 1.2em;
   }
-  /* header .menu_wrapper .menu ul li:hover .sub-menu {
-    display: block;
-  } */
-  header .menu_wrapper .menu ul li a:hover {
-    /* background: #ffc35c; */
+  header .menu_wrapper .menu nav ul li a:hover {
     background-color: #efefef;
     color: #444;
   }
-  /* サブメニュー */
-  header .menu_wrapper .menu ul li .sub-menu {
+  header .menu_wrapper .menu nav ul li .sub-menu {
     position: absolute;
     /* top: 55px;
-    left: 0; */
+              left: 0; */
     display: none;
     /* padding: 0 30px; */
   }
-  header .menu_wrapper .menu ul li .sub-menu li {
+  header .menu_wrapper .menu nav ul li .sub-menu li {
     display: block;
   }
-  header .menu_wrapper .menu ul li:hover .sub-menu {
-    display: block;
-  }
-  header .menu_wrapper .menu ul li .sub-menu li a {
+  header .menu_wrapper .menu nav ul li .sub-menu li a {
     background-color: #efefef;
     color: #444;
   }
-  header .menu_wrapper .menu ul li .sub-menu li a:hover {
-    background-color: rgb(243, 13, 44);
+  header .menu_wrapper .menu nav ul li .sub-menu li a .new {
+    width: 10%;
+    height: 10%;
   }
-  /* ここまで */
+  header .menu_wrapper .menu nav ul li .sub-menu li a:hover {
+    background-color: #f30d2c;
+  }
   header .fa-birthday-cake {
     color: green;
     margin: 0 auto;
@@ -123,6 +112,10 @@
   main #posts-wrap #posts .sub-title h2 {
     display: flex;
     align-items: center;
+  }
+  main #posts-wrap #posts .sub-title h2 .imp {
+    width: 3%;
+    height: auto;
   }
   main #posts-wrap #posts .sub-title h2:before,
   main #posts-wrap #posts .sub-title h2:after {
@@ -154,6 +147,10 @@
   main #posts-wrap #posts #post-wrap #post .post-header h2 {
     font-size: 16px;
     font-weight: bold;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-header h2 a .okashi {
+    width: 5%;
+    height: auto;
   }
   main #posts-wrap #posts #post-wrap #post .post-header .post-meta {
     font-size: 12px;
@@ -201,9 +198,8 @@
   #profile {
     order: -1;
     width: 20%;
-    margin-top: 20px;
-    /* margin: 10px; */
-    padding: 0 10px 0 10px;
+    margin: 20px;
+    padding: 0 10px;
     /*枠デザイン*/
     /*内容*/
     /*プロフィール画像*/
@@ -233,7 +229,6 @@
   }
   #profile .profile_center {
     text-align: center;
-    /* margin: 10px 15px 0 0; */
   }
   #profile .profile_figure {
     width: 60px;
@@ -277,10 +272,10 @@
     color: #aaa;
     border-top: 1px solid #ccc;
   }
-  body footer .c-wrapper {
+  footer .c-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
   }
 }
 
@@ -295,7 +290,6 @@
     list-style: none;
     overflow: hidden;
     padding: 0;
-    display: none;
   }
   body header .menu_wrapper .menu .menu ul {
     display: flex;
@@ -400,11 +394,6 @@
     font-size: 12px;
     color: #aaa;
     border-top: 1px solid #ccc;
-  }
-  body footer .c-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center
   }
 }
 /*# sourceMappingURL=style.css.map */
