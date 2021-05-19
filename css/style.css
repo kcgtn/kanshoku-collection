@@ -1,0 +1,410 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background: #f0ebeb;
+    font-family: Times New Roman;
+    margin: 5px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  header {
+    flex:0;
+  }
+  header .menu_wrapper .menu {
+    /* background: #f39800; */
+    /* margin-bottom: 30px; */
+    /* font-size: 12px;
+    list-style: none;
+    overflow: hidden;
+    padding: 0 30px; */
+    /* border-radius: 1.5em; */
+    /* margin-bottom: 13em; */
+    /* position: relative; */
+    /* width: 100%; */
+    /* background-color: #444; */
+    /* display: none; */
+  }
+  header .menu_wrapper .menu nav {
+    margin-bottom: 13em;
+    position: relative;
+    width: 100%;
+    background-color: #444;
+    border-radius: 1.5em;
+  }
+  header .menu_wrapper .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  header .menu_wrapper .menu ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  header .menu_wrapper .menu ul li a {
+    display: block;
+    width: 100%;
+    /* font-size: 15px; */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    /* padding: 10px 0; */
+    padding: 15px 30px;
+    color: #fff;
+  }
+  header .menu_wrapper .menu ul li a span {
+    margin-left: 1.2em;
+  }
+  /* header .menu_wrapper .menu ul li:hover .sub-menu {
+    display: block;
+  } */
+  header .menu_wrapper .menu ul li a:hover {
+    /* background: #ffc35c; */
+    background-color: #efefef;
+    color: #444;
+  }
+  /* サブメニュー */
+  header .menu_wrapper .menu ul li .sub-menu {
+    position: absolute;
+    /* top: 55px;
+    left: 0; */
+    display: none;
+    /* padding: 0 30px; */
+  }
+  header .menu_wrapper .menu ul li .sub-menu li {
+    display: block;
+  }
+  header .menu_wrapper .menu ul li:hover .sub-menu {
+    display: block;
+  }
+  header .menu_wrapper .menu ul li .sub-menu li a {
+    background-color: #efefef;
+    color: #444;
+  }
+  header .menu_wrapper .menu ul li .sub-menu li a:hover {
+    background-color: rgb(243, 13, 44);
+  }
+  /* ここまで */
+  header .fa-birthday-cake {
+    color: green;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 9em;
+    padding: 10px 0;
+    z-index: 1;
+  }
+  header h1 {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Quicksand, sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  main {
+    display: flex;
+    flex: 1;
+  }
+  main #posts-wrap {
+    width: auto;
+  }
+  main #posts-wrap #posts .sub-title h2 {
+    display: flex;
+    align-items: center;
+  }
+  main #posts-wrap #posts .sub-title h2:before,
+  main #posts-wrap #posts .sub-title h2:after {
+    content: "";
+    height: 2px;
+    background: #000;
+    flex-grow: 1;
+  }
+  main #posts-wrap #posts .sub-title h2:before {
+    margin: 0 20px 0 0;
+  }
+  main #posts-wrap #posts .sub-title h2:after {
+    margin: 0 0 0 20px;
+  }
+  main #posts-wrap #posts #post-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+  }
+  main #posts-wrap #posts #post-wrap #post {
+    margin: 5px 0 5px 0;
+    background-color: greenyellow;
+    width: 30%;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-header {
+    margin-bottom: 15px;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-header .post-meta {
+    font-size: 12px;
+    padding: 7px 0;
+    color: #555;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-content {
+    overflow: hidden;
+  }
+  main #posts-wrap #posts #post-wrap #post .post-content .post-image {
+    float: left;
+    width: 115px;
+  }
+  #sidebar {
+    width: 10%;
+    flex: 1;
+    display: none;
+  }
+  #sidebar .widget {
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+  #sidebar .widget .w-title h3 {
+    color: mediumblue;
+    font-weight: bold;
+    padding-bottom: 7px;
+    text-align: center;
+  }
+  #sidebar .widget .items {
+    background-color: hotpink;
+  }
+  #sidebar .widget .items ul {
+    list-style-type: none;
+    display: list-item;
+  }
+  #sidebar .widget .items ul li {
+    margin: 10px;
+    display: block;
+    line-height: 1.8;
+  }
+  #sidebar .widget .items ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  #profile {
+    order: -1;
+    width: 20%;
+    margin-top: 20px;
+    /* margin: 10px; */
+    padding: 0 10px 0 10px;
+    /*枠デザイン*/
+    /*内容*/
+    /*プロフィール画像*/
+    /*名前*/
+    /*自己紹介文*/
+    /*リスト*/
+  }
+  #profile .profile_box {
+    margin: 0;
+    border-left: solid 2px #ff7d6e;
+    border-right: solid 2px #ff7d6e;
+    border-bottom: solid 10px #ff7d6e;
+    border-radius: 10px;
+  }
+  #profile .profile_box .box-title {
+    font-size: 10px;
+    line-height: 1.8;
+    background: #bf4b3d;
+    /*タイトルの背景色*/
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    /*文字色*/
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-radius: 10px 10px 0 0;
+  }
+  #profile .profile_center {
+    text-align: center;
+    /* margin: 10px 15px 0 0; */
+  }
+  #profile .profile_figure {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*丸くする*/
+    border: solid 3px #f2d0cb;
+    /*枠線*/
+  }
+  #profile .profile_name {
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  #profile .profile_box p {
+    padding: 15px 20px;
+    margin: 0;
+  }
+  #profile .profile_box ul {
+    padding: 0.5em 1em 0.5em 0.3em;
+    position: relative;
+  }
+  #profile .profile_box ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none !important;
+  }
+  #profile .profile_box ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "";
+    /*アイコンの種類*/
+    font-weight: 900;
+    position: absolute;
+    color: #ff7d6e;
+    /*アイコン色*/
+  }
+  footer {
+    flex: 0;
+    padding: 15px 0;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+  }
+  body footer .c-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+}
+
+@media screen and (max-width: 599px) {
+  body {
+    padding: 10px;
+  }
+  body header .menu_wrapper .menu .menu {
+    background: #f39800;
+    margin-bottom: 30px;
+    font-size: 12px;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    display: none;
+  }
+  body header .menu_wrapper .menu .menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  body header .menu_wrapper .menu .menu ul li {
+    list-style: none;
+  }
+  body header .menu_wrapper .menu .menu ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #fff;
+  }
+  body header .menu_wrapper .menu .menu ul li a:hover {
+    background: #ffc35c;
+  }
+  body header .fa-birthday-cake {
+    color: green;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 9em;
+    padding: 10px 0;
+    z-index: 1;
+  }
+  body header h1 {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Quicksand, sans-serif;
+    margin: 10px 0;
+    text-align: center;
+  }
+  body main {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #posts-wrap {
+    width: 100%;
+  }
+  body main #posts-wrap #posts {
+    width: 100%;
+  }
+  body main #posts-wrap #posts #post-wrap #post {
+    margin-bottom: 30px;
+    width: 50%;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-header {
+    margin-bottom: 15px;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-header .post-meta {
+    font-size: 12px;
+    padding: 7px 0;
+    color: #555;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-content {
+    overflow: hidden;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-content .post-image {
+    float: left;
+    width: 115px;
+  }
+  body main #posts-wrap #posts #post-wrap #post .post-content .post-body {
+    margin-left: 115px;
+  }
+  body main #sidebar {
+    width: 100%;
+  }
+  body main #sidebar .widget {
+    margin-bottom: 25px;
+  }
+  body main #sidebar .widget .w-title h3 {
+    font-weight: bold;
+    padding-bottom: 7px;
+  }
+  body main #sidebar .widget .items ul {
+    list-style-type: none;
+    display: list-item;
+  }
+  body main #sidebar .widget .items ul li {
+    display: block;
+    line-height: 1.8;
+  }
+  body main #profile {
+    order: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body footer {
+    padding: 15px 0;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+  }
+  body footer .c-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width:1500px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background: #f0ebeb;
+    font-family: Times New Roman;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+    
+    header {
+      flex: 0;
+      .menu_wrapper{
+        .menu {
+          background: #f39800;
+          margin-bottom: 30px;
+          font-size: 12px;
+          list-style: none;
+          overflow: hidden;
+          background: #f39800;
+          padding: 0 30px;
+          border-radius: 1.5em;
+          display: none;
+          ul {
+            // padding: 70px 10px 0;
+            display: flex;
+            justify-content: space-around;
+            // float: left;
+            // width: 150px;
+            // text-align: center;
+            li {
+              list-style: none;
+              // justify-content: space-between;
+              
+              a {
+                display: block;
+                width: 100%;
+                font-size: 15px;
+                box-sizing: border-box;
+                color: black;
+                text-decoration: none;
+                padding: 10px 0;
+                color: #fff;
+              }
+              a:hover {
+                background: #ffc35c;
+              }
+            }
+          }
+        }
+      }
+      
+      .fa-birthday-cake {
+        color: green;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        font-size:9em;
+        padding: 10px 0;
+        z-index: 1;
+      }
+      
+      h1 {
+        display: block;
+        color: black;
+        font-weight: bold;
+        font-size: 2em;
+        font-family: Quicksand, sans-serif;
+        margin: 10px 0;
+        text-align: center;
+        // position: absolute;
+        // top: 10%;
+        // left: 15%;
+        // z-index: 2;
+      }
+      
+      
+    }
+    
+    main {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      margin: 0 auto;
+      // justify-content: space-between;
+      .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+          .breadcrumb *, .breadcrumb *:after, .breadcrumb *:before {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+          }
+          .breadcrumb {
+            margin: 1em auto;
+            padding: 1em 2em;
+            // background-color: #3949AB;
+            color: #fff;
+            border-radius: 0.5em;
+          }
+          .breadcrumb a {
+            text-decoration: none;
+            color: #7986CB;
+          }
+          .breadcrumb ul {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .breadcrumb li {
+            display: inline-block;
+            position: relative;
+            padding-right: calc(16px + 8px);
+            margin-right: 8px;
+            color: #7986CB;
+          }
+          .breadcrumb li::before {
+            content: '›';
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            text-align: center;
+            font-size: 1em;
+            color: inherit;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+          }
+          .breadcrumb li:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            color: #ffffff;
+          }
+          .breadcrumb li:last-child::before {
+            content: normal;
+          }
+        
+
+        .s-wrapper {
+          display: flex;
+          width: 100%;
+          .k-wrapper {
+            padding: 10px;
+            width: 80%;
+            .k-main {
+              background: white;
+              border-radius: 1.5em;
+              padding: 20px;
+              /*------------------------------画像付き吹き出し(会話)------------------------------*/
+              /* 吹き出し 全体*/
+              .talking {
+                margin-bottom:2em;
+                position:relative;
+              }
+
+              .talking:before , .talking:after {
+                clear:both;
+                content:"";
+                display:block;
+              }
+
+              /*アイコン*/
+              .talking figure {
+                width:60px;     /*アイコンの横幅*/
+                height:60px;    /*アイコンの縦幅*/
+              }
+
+              .talking-left_icon {
+                float:left;
+                margin-right:20px;    /*アイコンの右の余白(左の吹き出し)*/
+              }
+
+              .talking-right_icon {
+                float:right;
+                margin-left:20px;    /*アイコンの左の余白(右の吹き出し)*/
+              }
+
+              .talking figure img {
+                width:100%;
+                height:100%;
+                margin:0;
+                border:2px solid #aaa;
+                border-radius:50%;    /*アイコンの角丸*/
+              }
+
+              /*アイコンの下の名前*/
+              .talking-left_icon figcaption ,
+              .talking-right_icon figcaption {
+                padding:2px 0 0;
+                font-size:12px;
+                text-align:center;
+              }
+
+              /*吹き出しのセリフ部分*/
+              .talking-left , .talking-right  {
+                position:relative;
+                padding:10px;
+                border-style:solid;    /*枠線の線種*/
+                border-radius:10px;    /*セリフを入れる部分の角丸*/
+                max-width: calc(100% - 80px);
+              }
+
+              .talking p {
+                margin:0;
+              }
+
+              .talking p :last-child {
+                margin:0;
+              }
+
+              /*---左の吹き出し---*/
+              .talking-left {
+                float:left;
+                border-width:2px;         /*枠線の太さ*/
+                border-color:lightpink;   /*枠線の色*/
+                background:lightpink;    /*背景色*/
+              }
+
+              /*左の吹き出し 三角*/
+              .talking-left:before {
+                position: absolute;
+                content: '';
+                border: 10px solid transparent;
+                border-right: 10px solid #aaa;
+                top: 15px;
+                left: -22px;
+              }
+
+              .talking-left:after {
+                position: absolute;
+                content: '';
+                border: 10px solid transparent;
+                border-right: 10px solid lightpink;
+                top: 15px;
+                left: -19px;
+              }
+
+              /*---右の吹き出し---*/
+              .talking-right {
+                float:right;
+                border-width:2px;      /*枠線の太さ*/
+                border-color:khaki;    /*枠線の色*/
+                background:khaki;    /*背景色*/
+              }
+
+              /*右の吹き出し 三角*/
+              .talking-right:before {
+                position: absolute;
+                content: '';
+                border: 10px solid transparent;
+                border-left: 10px solid #aaa;
+                top: 15px;
+                right: -22px;
+              }
+
+              .talking-right:after {
+                position: absolute;
+                content: '';
+                border: 10px solid transparent;
+                border-left: 10px solid khaki;
+                top: 15px;
+                right: -19px;
+              }
+            }
+          }
+        }
+      }
+      
+      #sidebar {
+        width: 25%;
+        flex: 1;
+        
+        
+        .widget {
+          margin-bottom: 25px;
+          margin: 10px;
+          .w-title {
+            // background-color: mistyrose;
+            h3 {
+              color: mediumblue;
+              font-weight: bold;
+              padding-bottom: 7px;
+              text-align: center;
+            }
+          }
+          .items {
+            background-color: hotpink;
+            border-radius: .3em;
+            ul {
+              list-style-type:none;
+              display: list-item;
+              li {
+                margin: 10px;
+                display: block;
+                line-height: 1.8;
+                a {
+                  text-decoration: none;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+        }
+      }
+      
+      footer {
+        flex: 0;
+        padding: 15px 0;
+        font-size: 12px;
+        color: #aaa;
+        border-top: 1px solid #ccc;
+        .c-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center
+        }
+      }
+    }
+  
+
+    
+    // スマホ画面
+    @media screen and (max-width:599px) {
+      body {
+        padding: 10px;
+        header {
+          .menu_wrapper{
+            .menu {
+              .menu {
+                background: #f39800;
+                margin-bottom: 30px;
+                font-size: 12px;
+                list-style: none;
+                overflow: hidden;
+                padding: 0;
+                display: none;
+                ul {
+                  // padding: 70px 10px 0;
+                  display: flex;
+                  justify-content: space-between;
+                  // float: left;
+                  // width: 150px;
+                  // text-align: center;
+                  li {
+                    list-style: none;
+                    // justify-content: space-between;
+                    
+                    a {
+                      display: block;
+                      width: 100%;
+                      font-size: 15px;
+                      box-sizing: border-box;
+                      color: black;
+                      text-decoration: none;
+                      padding: 10px 0;
+                      color: #fff;
+                    }
+                    a:hover {
+                      background: #ffc35c;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+          .fa-birthday-cake {
+            color: green;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            font-size:9em;
+            padding: 10px 0;
+            z-index: 1;
+          }
+          
+          h1 {
+            display: block;
+            color: black;
+            font-weight: bold;
+            font-size: 2em;
+            font-family: Quicksand, sans-serif;
+            margin: 10px 0;
+            text-align: center;
+          }
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+          
+          #sidebar {
+            width: 100%;
+            
+            .widget {
+              margin-bottom: 25px;
+              .w-title {
+                h3 {
+                  font-weight: bold;
+                  padding-bottom: 7px;
+                }
+              }
+              .items {
+                
+                ul {
+                  list-style-type:none;
+                  display: list-item;
+                  li {
+                    display: block;
+                    line-height: 1.8;
+                  }
+                }
+              }
+            }
+          }
+        
+        footer {
+          padding: 15px 0;
+          font-size: 12px;
+          color: #aaa;
+          border-top: 1px solid #ccc;
+        }
+      }
+    }
+  }
