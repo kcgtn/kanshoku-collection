@@ -280,54 +280,93 @@
 }
 
 @media screen and (max-width: 599px) {
-  body {
-    padding: 10px;
+  body header .menu_wrapper {
+    position: relative;
   }
-  body header .menu_wrapper .menu .menu {
-    background: #f39800;
-    margin-bottom: 30px;
-    font-size: 12px;
-    list-style: none;
-    overflow: hidden;
-    padding: 0;
+  body header .menu_wrapper .menu nav {
+    display: none;
   }
-  body header .menu_wrapper .menu .menu ul {
-    display: flex;
-    justify-content: space-between;
+  body header .menu_wrapper .menu #nav-drawer {
+    position: relative;
   }
-  body header .menu_wrapper .menu .menu ul li {
-    list-style: none;
+  body header .menu_wrapper .menu .nav-shown {
+    display: none;
   }
-  body header .menu_wrapper .menu .menu ul li a {
+  body header .menu_wrapper .menu #nav-open {
+    display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+  }
+  body header .menu_wrapper .menu #nav-open span, body header .menu_wrapper .menu #nav-open span::before, body header .menu_wrapper .menu #nav-open span::after {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #555;
     display: block;
+    content: "";
+    cursor: pointer;
+  }
+  body header .menu_wrapper .menu #nav-open span:before {
+    bottom: -8px;
+  }
+  body header .menu_wrapper .menu #nav-open span:after {
+    bottom: -16px;
+  }
+  body header .menu_wrapper .menu #nav-close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
     width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
-    color: black;
-    text-decoration: none;
-    padding: 10px 0;
-    color: #fff;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
   }
-  body header .menu_wrapper .menu .menu ul li a:hover {
-    background: #ffc35c;
+  body header .menu_wrapper .menu #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 90%;
+    max-width: 330px;
+    height: 100%;
+    background: #8ba5d2;
+    transition: .3s ease-in-out;
+    transform: translateX(-105%);
   }
-  body header .fa-birthday-cake {
-    color: green;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    font-size: 9em;
-    padding: 10px 0;
-    z-index: 1;
-  }
-  body header h1 {
+  body header .menu_wrapper .menu #nav-content ul {
     display: block;
-    color: black;
-    font-weight: bold;
-    font-size: 2em;
-    font-family: Quicksand, sans-serif;
-    margin: 10px 0;
-    text-align: center;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    letter-spacing: -1em;
+    justify-content: space-around;
+  }
+  body header .menu_wrapper .menu #nav-content .nav_item {
+    letter-spacing: 0em;
+  }
+  body header .menu_wrapper .menu #nav-content .nav_item a {
+    text-decoration: none;
+    color: white;
+  }
+  body header .menu_wrapper .menu #nav-content #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: .5;
+  }
+  body header .menu_wrapper .menu #nav-content #nav-input:checked ~ #nav-content {
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+  }
+  body header .menu_wrapper .menu #nav-content .header-logo-menu {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    justify-content: space-between;
   }
   body main {
     display: flex;
