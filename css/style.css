@@ -22,8 +22,12 @@
   header .menu_wrapper .top-wrapper .h-icon {
     text-align: center;
   }
+  header .menu_wrapper .top-wrapper .h-icon img {
+    width: auto;
+    height: 500px;
+  }
   header .menu_wrapper .menu nav {
-    margin-bottom: 13em;
+    margin-bottom: 3em;
     position: relative;
     width: 100%;
     background-color: #444;
@@ -84,14 +88,8 @@
   header .menu_wrapper .menu nav ul li .sub-menu li a:hover {
     background-color: #f30d2c;
   }
-  header .fa-birthday-cake {
-    color: green;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    font-size: 9em;
-    padding: 10px 0;
-    z-index: 1;
+  header .menu_wrapper .menu .header-logo-menu #nav-drawer {
+    display: none;
   }
   header h1 {
     display: block;
@@ -138,7 +136,6 @@
   }
   main #posts-wrap #posts #post-wrap #post {
     margin: 5px 0 5px 0;
-    background-color: greenyellow;
     width: 30%;
   }
   main #posts-wrap #posts #post-wrap #post .post-header {
@@ -231,12 +228,16 @@
     text-align: center;
   }
   #profile .profile_figure {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: auto;
+    height: 100px;
+    border-radius: 40%;
     /*丸くする*/
     border: solid 3px #f2d0cb;
     /*枠線*/
+  }
+  #profile .twitter a {
+    text-decoration: none;
+    color: #0077ff;
   }
   #profile .profile_name {
     padding: 15px 20px;
@@ -286,18 +287,29 @@
   body header .menu_wrapper .menu nav {
     display: none;
   }
-  body header .menu_wrapper .menu #nav-drawer {
-    position: relative;
+  body header .menu_wrapper .menu .menu-line {
+    width: 100%;
+    height: 50px;
+    background-color: bisque;
   }
-  body header .menu_wrapper .menu .nav-shown {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu {
+    display: flex;
+    flex-direction: row;
+  }
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-drawer {
+    position: relative;
+    display: block;
+  }
+  body header .menu_wrapper .menu .menu-line .header-logo-menu .nav-shown {
     display: none;
   }
-  body header .menu_wrapper .menu #nav-open {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open {
     display: inline-block;
     width: 30px;
+    height: 22px;
     vertical-align: middle;
   }
-  body header .menu_wrapper .menu #nav-open span, body header .menu_wrapper .menu #nav-open span::before, body header .menu_wrapper .menu #nav-open span::after {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open span, body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open span::before, body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open span::after {
     position: absolute;
     height: 3px;
     width: 25px;
@@ -307,13 +319,13 @@
     content: "";
     cursor: pointer;
   }
-  body header .menu_wrapper .menu #nav-open span:before {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open span:before {
     bottom: -8px;
   }
-  body header .menu_wrapper .menu #nav-open span:after {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-open span:after {
     bottom: -16px;
   }
-  body header .menu_wrapper .menu #nav-close {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-close {
     display: none;
     position: fixed;
     z-index: 99;
@@ -325,7 +337,7 @@
     opacity: 0;
     transition: .3s ease-in-out;
   }
-  body header .menu_wrapper .menu #nav-content {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content {
     overflow: auto;
     position: fixed;
     top: 0;
@@ -338,7 +350,7 @@
     transition: .3s ease-in-out;
     transform: translateX(-105%);
   }
-  body header .menu_wrapper .menu #nav-content ul {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content ul {
     display: block;
     padding: 10px;
     margin: 0;
@@ -346,27 +358,20 @@
     letter-spacing: -1em;
     justify-content: space-around;
   }
-  body header .menu_wrapper .menu #nav-content .nav_item {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content .nav_item {
     letter-spacing: 0em;
   }
-  body header .menu_wrapper .menu #nav-content .nav_item a {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content .nav_item a {
     text-decoration: none;
     color: white;
   }
-  body header .menu_wrapper .menu #nav-content #nav-input:checked ~ #nav-close {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content #nav-input:checked ~ #nav-close {
     display: block;
     opacity: .5;
   }
-  body header .menu_wrapper .menu #nav-content #nav-input:checked ~ #nav-content {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content #nav-input:checked ~ #nav-content {
     transform: translateX(0%);
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
-  }
-  body header .menu_wrapper .menu #nav-content .header-logo-menu {
-    display: flex;
-    position: absolute;
-    top: 5px;
-    left: 15px;
-    justify-content: space-between;
   }
   body main {
     display: flex;
