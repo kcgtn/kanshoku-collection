@@ -21,6 +21,13 @@
     header {
       flex: 0;
       .menu_wrapper{
+        .top-wrapper {
+          .h-icon {
+            img {
+              width: 100%;
+            }
+          }
+        }
         .menu {
           // background: #f39800;
           // margin-bottom: 30px;
@@ -379,14 +386,7 @@
         padding: 10px;
         header {
           .menu_wrapper{
-            .menu {
               .menu {
-                background: #f39800;
-                margin-bottom: 30px;
-                font-size: 12px;
-                list-style: none;
-                overflow: hidden;
-                padding: 0;
                 display: none;
                 ul {
                   // padding: 70px 10px 0;
@@ -413,7 +413,6 @@
                       background: #ffc35c;
                     }
                   }
-                }
               }
             }
           }
@@ -441,38 +440,52 @@
         main {
           display: flex;
           flex-direction: column;
-          
-          #sidebar {
-            width: 100%;
-            
-            .widget {
-              margin-bottom: 25px;
-              .w-title {
-                h3 {
-                  font-weight: bold;
-                  padding-bottom: 7px;
-                }
+          .wrapper {
+            .s-wrapper {
+              display: block;
+              .k-wrapper {
+                width: 100%;
+                padding: 0;
               }
-              .items {
+              #sidebar {
+                width: 100%;
                 
-                ul {
-                  list-style-type:none;
-                  display: list-item;
-                  li {
-                    display: block;
-                    line-height: 1.8;
+                .widget {
+                  margin-bottom: 25px;
+                  .w-title {
+                    h3 {
+                      font-weight: bold;
+                      padding-bottom: 7px;
+                    }
+                  }
+                  .items {
+                    
+                    ul {
+                      list-style-type:none;
+                      display: list-item;
+                      li {
+                        display: block;
+                        line-height: 1.8;
+                      }
+                    }
                   }
                 }
               }
             }
           }
-        
+        }
         footer {
           padding: 15px 0;
           font-size: 12px;
           color: #aaa;
           border-top: 1px solid #ccc;
+          .c-wrapper {
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            // .c2-wrapper {
+            // }
+          }
         }
       }
     }
-  }

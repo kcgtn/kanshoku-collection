@@ -18,6 +18,9 @@
   header {
     flex: 0;
   }
+  header .menu_wrapper .top-wrapper .h-icon img {
+    width: 100%;
+  }
   header .menu_wrapper .menu nav {
     margin-bottom: 13em;
     position: relative;
@@ -331,23 +334,17 @@
   body {
     padding: 10px;
   }
-  body header .menu_wrapper .menu .menu {
-    background: #f39800;
-    margin-bottom: 30px;
-    font-size: 12px;
-    list-style: none;
-    overflow: hidden;
-    padding: 0;
+  body header .menu_wrapper .menu {
     display: none;
   }
-  body header .menu_wrapper .menu .menu ul {
+  body header .menu_wrapper .menu ul {
     display: flex;
     justify-content: space-between;
   }
-  body header .menu_wrapper .menu .menu ul li {
+  body header .menu_wrapper .menu ul li {
     list-style: none;
   }
-  body header .menu_wrapper .menu .menu ul li a {
+  body header .menu_wrapper .menu ul li a {
     display: block;
     width: 100%;
     font-size: 15px;
@@ -357,7 +354,7 @@
     padding: 10px 0;
     color: #fff;
   }
-  body header .menu_wrapper .menu .menu ul li a:hover {
+  body header .menu_wrapper .menu ul li a:hover {
     background: #ffc35c;
   }
   body header .fa-birthday-cake {
@@ -382,29 +379,41 @@
     display: flex;
     flex-direction: column;
   }
-  body main #sidebar {
+  body main .wrapper .s-wrapper {
+    display: block;
+  }
+  body main .wrapper .s-wrapper .k-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  body main .wrapper .s-wrapper #sidebar {
     width: 100%;
   }
-  body main #sidebar .widget {
+  body main .wrapper .s-wrapper #sidebar .widget {
     margin-bottom: 25px;
   }
-  body main #sidebar .widget .w-title h3 {
+  body main .wrapper .s-wrapper #sidebar .widget .w-title h3 {
     font-weight: bold;
     padding-bottom: 7px;
   }
-  body main #sidebar .widget .items ul {
+  body main .wrapper .s-wrapper #sidebar .widget .items ul {
     list-style-type: none;
     display: list-item;
   }
-  body main #sidebar .widget .items ul li {
+  body main .wrapper .s-wrapper #sidebar .widget .items ul li {
     display: block;
     line-height: 1.8;
   }
-  body main footer {
+  body footer {
     padding: 15px 0;
     font-size: 12px;
     color: #aaa;
     border-top: 1px solid #ccc;
+  }
+  body footer .c-wrapper {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
   }
 }
 /*# sourceMappingURL=page.css.map */
