@@ -198,26 +198,29 @@
     text-decoration: none;
     color: white;
   }
-  #profile {
+  .p-wrapper {
     order: -1;
     width: 20%;
     margin: 20px;
     padding: 0 10px;
+  }
+  .p-wrapper #profile {
     /*枠デザイン*/
+    margin-bottom: 5px;
     /*内容*/
     /*プロフィール画像*/
     /*名前*/
     /*自己紹介文*/
     /*リスト*/
   }
-  #profile .profile_box {
+  .p-wrapper #profile .profile_box {
     margin: 0;
     border-left: solid 2px #ff7d6e;
     border-right: solid 2px #ff7d6e;
     border-bottom: solid 10px #ff7d6e;
     border-radius: 10px;
   }
-  #profile .profile_box .box-title {
+  .p-wrapper #profile .profile_box .box-title {
     font-size: 10px;
     line-height: 1.8;
     background: #bf4b3d;
@@ -230,10 +233,10 @@
     letter-spacing: 0.05em;
     border-radius: 10px 10px 0 0;
   }
-  #profile .profile_center {
+  .p-wrapper #profile .profile_center {
     text-align: center;
   }
-  #profile .profile_figure {
+  .p-wrapper #profile .profile_figure {
     width: auto;
     height: 100px;
     border-radius: 40%;
@@ -241,29 +244,29 @@
     border: solid 3px #f2d0cb;
     /*枠線*/
   }
-  #profile .twitter a {
+  .p-wrapper #profile .twitter a {
     text-decoration: none;
     color: #0077ff;
   }
-  #profile .profile_name {
+  .p-wrapper #profile .profile_name {
     padding: 15px 20px;
     font-weight: bold;
     font-size: 16px;
   }
-  #profile .profile_box p {
+  .p-wrapper #profile .profile_box p {
     padding: 15px 20px;
     margin: 0;
   }
-  #profile .profile_box ul {
+  .p-wrapper #profile .profile_box ul {
     padding: 0.5em 1em 0.5em 0.3em;
     position: relative;
   }
-  #profile .profile_box ul li {
+  .p-wrapper #profile .profile_box ul li {
     line-height: 1.5;
     padding: 0.5em 0;
     list-style-type: none !important;
   }
-  #profile .profile_box ul li:before {
+  .p-wrapper #profile .profile_box ul li:before {
     font-family: "Font Awesome 5 Free";
     content: "";
     /*アイコンの種類*/
