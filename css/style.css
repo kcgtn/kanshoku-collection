@@ -405,7 +405,7 @@
   }
   body main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 5px;
   }
   body main #posts-wrap {
@@ -458,26 +458,38 @@
     display: block;
     line-height: 1.8;
   }
-  body main #profile {
-    order: 0;
+  body main .p-wrapper {
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  body main #profile .profile_box .profile_center {
+  body main .p-wrapper #profile {
+    order: 0;
+    width: 100%;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+  body main .p-wrapper #profile .profile_box .profile_center {
     display: flex;
     justify-content: space-around;
   }
-  body main #profile .profile_box .profile_center img {
+  body main .p-wrapper #profile .profile_box .profile_center .profile_figure {
     transform: translate(0, 12%);
   }
-  body main #profile .profile_box .profile_center .profile_name a {
+  body main .p-wrapper #profile .profile_box .profile_center .profile_figure2 {
+    transform: translate(-9%, 0);
+    border-radius: 40%;
+    border: solid 3px #f2d0cb;
+    width: auto;
+    height: 100px;
+  }
+  body main .p-wrapper #profile .profile_box .profile_center .profile_name a {
     transform: translate(0, 20px);
     display: block;
     font-size: 20px;
   }
-  body main #profile .profile_box .profile_center .profile_name .twitter {
-    transform: translate(0, 50px);
+  body main .p-wrapper #profile .profile_box .profile_center .profile_name .twitter {
+    transform: translate(0, 20px);
   }
   body footer {
     padding: 15px 0;

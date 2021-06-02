@@ -524,7 +524,7 @@
               }
       main {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: 5px;
           #posts-wrap {
             width: 100%;
@@ -592,35 +592,46 @@
               }
             }
           }
-          
-          #profile {
-            order: 0;
+          .p-wrapper {
             width: 100%;
             margin: 0;
             padding: 0;
-            .profile_box {
-              .profile_center {
-                display: flex;
-                justify-content: space-around;
-                img {
-                  transform: translate(0, 12%);
-                }
-                .profile_name {
-                  a {
-                    transform: translate(0, 20px);
-                    display: block;
-                    font-size: 20px;
+            #profile {
+              order: 0;
+              width: 100%;
+              margin: 0 0 5px 0;
+              padding: 0;
+              .profile_box {
+                .profile_center {
+                  display: flex;
+                  justify-content: space-around;
+                  .profile_figure {
+                    transform: translate(0, 12%);
                   }
-                  .twitter {
-                    transform: translate(0, 50px);
+                  .profile_figure2 {
+                    transform: translate(-9%, 0);
+                    border-radius: 40%;
+                    border: solid 3px #f2d0cb;
+                    width: auto;
+                    height: 100px;
                   }
+                  .profile_name {
+                    a {
+                      transform: translate(0, 20px);
+                      display: block;
+                      font-size: 20px;
+                    }
+                    .twitter {
+                      transform: translate(0, 20px);
+                    }
                 }
               }
             }
           }
         }
-        
-        footer {
+      }
+          
+          footer {
           padding: 15px 0;
           font-size: 12px;
           color: #aaa;
