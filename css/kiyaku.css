@@ -153,6 +153,20 @@
 }
 
 @media screen and (max-width: 1500px) and (max-width: 599px) {
+  body header .menu_wrapper .top-wrapper a {
+    white-space: nowrap;
+  }
+  body main .wrapper .section {
+    display: block;
+  }
+  body main .wrapper .section .text_wrapper {
+    width: 100%;
+    margin: 30px 5px;
+    padding: 0;
+  }
+  body main .wrapper .section #sidebar {
+    width: 100%;
+  }
   body footer {
     padding: 15px 0;
     font-size: 12px;

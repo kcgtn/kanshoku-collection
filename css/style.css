@@ -497,5 +497,10 @@
     color: #aaa;
     border-top: 1px solid #ccc;
   }
+  body footer .c-wrapper {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
