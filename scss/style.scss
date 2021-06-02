@@ -101,10 +101,18 @@
           }
         }
       }
+    .menu-line {
       .header-logo-menu {
         #nav-drawer {
           display: none;
         }
+      }
+          .title-text {
+            display: none;
+            a {
+              display: none;
+            }
+          }
       }
     }
   }
@@ -345,9 +353,20 @@
     @media screen and (max-width:599px) {
       body {
         // padding: 10px;
+        margin: 0;
+        .wf-nicomoji { font-family: "Nico Moji"; }
         header {
           .menu_wrapper{
+            flex-direction: column-reverse;
+            display: flex;
             position: relative;
+            .top-wrapper {
+              .h-icon {
+                img {
+                  width: 100%;
+                }
+              }
+            }
               .menu {
                 // background: #f39800;
                 // margin-bottom: 30px;
@@ -362,6 +381,17 @@
                   width: 100%;
                   height: 50px;
                   background-color: bisque;
+                  .title-text {
+                    position: relative;
+                    a {
+                      font-size: 150%;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    }
+                    // .wf-nicomoji { font-family: "Nico Moji"; }
+                  }
                   .header-logo-menu {
                     display: flex;
                     // position: absolute;
@@ -486,9 +516,10 @@
                   }
                 }
               }
-                main {
-                  display: flex;
-          flex-direction: column;
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
           #posts-wrap {
             width: 100%;
             #posts {
@@ -561,6 +592,25 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            .profile_box {
+              .profile_center {
+                display: flex;
+                justify-content: space-around;
+                img {
+                  transform: translate(0, 12%);
+                }
+                .profile_name {
+                  a {
+                    transform: translate(0, 20px);
+                    display: block;
+                    font-size: 20px;
+                  }
+                  .twitter {
+                    transform: translate(0, 50px);
+                  }
+                }
+              }
+            }
           }
         }
         

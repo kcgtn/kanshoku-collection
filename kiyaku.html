@@ -7,32 +7,90 @@
   <meta name="description" content="メタ説明文は1〜3の短いセンテンスでまとめます。">
   <meta property="og:description" content="メタ説明文と同じテキストでも、別のテキストを用意してもOKです。" />
   <title>間食コレクション</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./images/taitoru.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/taitoru.png">
+  <link rel="icon" type="image/png" href="./images/taitoru.png" sizes="192x192">
+  <link rel="stylesheet" href="./css/kiyaku.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="index.js"></script>
 </head>
 <body>
-  <p>免責事項
-
-    当ブログからのリンク・バナー等で移動したサイトで提供される情報・サービスについて、一切の責任を負いません。
-    
-    当ブログのコンテンツ・情報について、正確性や安全性を保証するものではございません。
-    
-    当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
-    
-    著作権について
-    
-    当ブログで掲載している文章・画像等について、無断で転載することを禁止します。
-    
-    当ブログは著作権・肖像権の侵害を目的としていません。著作権・肖像権に関して問題がありましたら、〇〇よりご連絡ください。迅速に対応させていただきます。</p>
-    <footer>
-      Copyright © <script language="JavaScript">
+  <header>
+    <div class="menu_wrapper" id="menu_wrapper">
+      <div class="top-wrapper">
+        <a class="wf-nicomoji" href="./index.html">間食コレクション</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      <div class="breadcrumb">
+        <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Listitem">
+            <a itemprop="item" href="../index.html"><span itemprop="name">ホーム</span></a>
+            <meta itemprop="position" content="1"/>
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Listitem">
+            <a itemprop="item" href="./kiyaku.html"><span itemprop="name">利用規約</span></a>
+            <meta itemprop="position" content="2">
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="text_wrapper">
+          <h1>利用規約</h1>
+          <h2>免責事項</h2>
+          <p>
+            <br>
+            当ブログからのリンク・バナー等で移動したサイトで提供される情報・サービスについて、一切の責任を負いません。
+            <br>
+            当ブログのコンテンツ・情報について、正確性や安全性を保証するものではございません。
+            <br>
+            当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+            <br>
+            <br>
+          </p>
+          <h2>著作権について</h2>
+          <p>
+            <br>
+            当ブログで掲載している文章・画像等について、無断で転載することを禁止します。
+            <br>
+            当ブログは著作権・肖像権の侵害を目的としていません。著作権・肖像権に関して問題がありましたら、〇〇よりご連絡ください。迅速に対応させていただきます。
+          </p>
+        </div>
+        <div id="sidebar">
+          <div class="widget">
+            <div class="w-title">
+              <h3>カテゴリー</h3>
+            </div>
+            <div class="items">
+              <ul>
+                <li><a href="#"><i class="fas fa-bolt"></i>item</a></li>
+                <li><a href="#"><i class="fas fa-dragon"></i>item</a></li>
+                <li><a href="#"><i class="fab fa-gulp"></i>item</a></li>
+              </ul>
+            </div>
+            <!-- items -->
+          </div>
+          <!-- widget -->
+        </div>
+        <!-- sidebar -->
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="c-wrapper">
+      Copyright © 2021/6 〜
+      <script language="JavaScript">
         myDate=new Date();
         Ye=myDate.getFullYear()+"/";
         Mo=myDate.getMonth()+1;
         document.write(Ye+Mo);
-        </script> 〇〇 Inc. All Rights Reserved.
-    </footer>
+      </script>
+      間食コレクション Inc. All Rights Reserved.
+    </div>
+  </footer>
 </body>
 </html>
