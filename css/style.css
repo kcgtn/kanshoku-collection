@@ -28,25 +28,26 @@
   }
   header .menu_wrapper .menu nav {
     margin-bottom: 3em;
-    position: relative;
     width: 100%;
     background-color: #444;
     border-radius: 1.5em;
   }
-  header .menu_wrapper .menu nav ul {
+  header .menu_wrapper .menu nav .menu_list {
     display: flex;
-    justify-content: space-around;
   }
-  header .menu_wrapper .menu nav ul li:hover .sub-menu {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item:hover .sub-menu {
     display: block;
   }
-  header .menu_wrapper .menu nav ul li {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item {
     list-style: none;
     display: inline-block;
+    width: calc(100% / 4);
+    text-align: center;
+    position: relative;
     /* サブメニュー */
     /* ここまで */
   }
-  header .menu_wrapper .menu nav ul li a {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a {
     display: block;
     width: 100%;
     /* font-size: 15px; */
@@ -60,32 +61,32 @@
     padding: 15px 30px;
     color: #fff;
   }
-  header .menu_wrapper .menu nav ul li a span {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a span {
     margin-left: 1.2em;
   }
-  header .menu_wrapper .menu nav ul li a:hover {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a:hover {
     background-color: #efefef;
     color: #444;
   }
-  header .menu_wrapper .menu nav ul li .sub-menu {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu {
     position: absolute;
     /* top: 55px;
               left: 0; */
     display: none;
     /* padding: 0 30px; */
   }
-  header .menu_wrapper .menu nav ul li .sub-menu li {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li {
     display: block;
   }
-  header .menu_wrapper .menu nav ul li .sub-menu li a {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a {
     background-color: #efefef;
     color: #444;
   }
-  header .menu_wrapper .menu nav ul li .sub-menu li a .new {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a .new {
     width: 10%;
     height: 10%;
   }
-  header .menu_wrapper .menu nav ul li .sub-menu li a:hover {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a:hover {
     background-color: #f30d2c;
   }
   header .menu_wrapper .menu .menu-line .header-logo-menu #nav-drawer {
@@ -244,6 +245,14 @@
     border: solid 3px #f2d0cb;
     /*枠線*/
   }
+  .p-wrapper #profile .profile_figure2 {
+    width: auto;
+    height: 100px;
+    border-radius: 40%;
+    /*丸くする*/
+    border: solid 3px #f2d0cb;
+    /*枠線*/
+  }
   .p-wrapper #profile .twitter a {
     text-decoration: none;
     color: #0077ff;
@@ -395,11 +404,11 @@
     text-decoration: none;
     color: white;
   }
-  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content #nav-input:checked ~ #nav-close {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-input:checked ~ #nav-close {
     display: block;
     opacity: .5;
   }
-  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-content #nav-input:checked ~ #nav-content {
+  body header .menu_wrapper .menu .menu-line .header-logo-menu #nav-input:checked ~ #nav-content {
     transform: translateX(0%);
     box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
   }
@@ -477,7 +486,6 @@
     transform: translate(0, 12%);
   }
   body main .p-wrapper #profile .profile_box .profile_center .profile_figure2 {
-    transform: translate(-9%, 0);
     border-radius: 40%;
     border: solid 3px #f2d0cb;
     width: auto;
