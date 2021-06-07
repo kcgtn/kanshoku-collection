@@ -18,48 +18,35 @@
   header {
     flex: 0;
   }
+  header .menu_wrapper .top-wrapper .h-icon {
+    text-align: center;
+  }
   header .menu_wrapper .top-wrapper .h-icon img {
-    width: 100%;
+    width: auto;
+    height: 500px;
   }
   header .menu_wrapper .menu nav {
-    margin-bottom: 13em;
-    position: relative;
+    margin-bottom: 3em;
     width: 100%;
     background-color: #444;
     border-radius: 1.5em;
   }
-  header .menu_wrapper .menu nav ul {
+  header .menu_wrapper .menu nav .menu_list {
     display: flex;
-    justify-content: space-around;
   }
-  header .menu_wrapper .menu nav ul li {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item:hover .sub-menu {
+    display: block;
+  }
+  header .menu_wrapper .menu nav .menu_list .menu_list_item {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
+    display: inline-block;
+    width: calc(100% / 4);
+    text-align: center;
+    position: relative;
     /* サブメニュー */
     /* ここまで */
   }
-  header .menu_wrapper .menu nav ul li .sub-menu {
-    position: absolute;
-    /* top: 55px;
-                  left: 0; */
-    display: none;
-    /* padding: 0 30px; */
-  }
-  header .menu_wrapper .menu nav ul li li {
-    display: block;
-  }
-  header .menu_wrapper .menu nav ul li li a {
-    background-color: #efefef;
-    color: #444;
-  }
-  header .menu_wrapper .menu nav ul li li a:hover {
-    background-color: #f30d2c;
-  }
-  header .menu_wrapper .menu nav ul li li:hover .sub-menu {
-    display: block;
-  }
-  header .menu_wrapper .menu nav ul li a {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a {
     display: block;
     width: 100%;
     /* font-size: 15px; */
@@ -73,21 +60,42 @@
     padding: 15px 30px;
     color: #fff;
   }
-  header .menu_wrapper .menu nav ul li a span {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a span {
     margin-left: 1.2em;
   }
-  header .menu_wrapper .menu nav ul li a:hover {
+  header .menu_wrapper .menu nav .menu_list .menu_list_item a:hover {
     background-color: #efefef;
     color: #444;
   }
-  header .fa-birthday-cake {
-    color: green;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    font-size: 9em;
-    padding: 10px 0;
-    z-index: 1;
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu {
+    position: absolute;
+    /* top: 55px;
+            left: 0; */
+    display: none;
+    /* padding: 0 30px; */
+  }
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li {
+    display: block;
+  }
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a {
+    background-color: #efefef;
+    color: #444;
+  }
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a .new {
+    width: 10%;
+    height: 10%;
+  }
+  header .menu_wrapper .menu nav .menu_list .menu_list_item .sub-menu li a:hover {
+    background-color: #f30d2c;
+  }
+  header .menu_wrapper .menu .menu-line .header-logo-menu #nav-drawer {
+    display: none;
+  }
+  header .menu_wrapper .menu .menu-line .title-text {
+    display: none;
+  }
+  header .menu_wrapper .menu .menu-line .title-text a {
+    display: none;
   }
   header h1 {
     display: block;
