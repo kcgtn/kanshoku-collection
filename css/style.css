@@ -311,7 +311,8 @@
     position: relative;
   }
   body header .menu_wrapper .top-wrapper .h-icon img {
-    width: 100%;
+    width: 90%;
+    height: auto;
   }
   body header .menu_wrapper .menu nav {
     display: none;
