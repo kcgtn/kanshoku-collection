@@ -226,8 +226,12 @@
   main .wrapper .s-wrapper .k-wrapper .k-main .k-i-2 {
     width: 50%;
   }
+  main .wrapper .s-wrapper .k-wrapper .k-main .yoko {
+    display: flex;
+  }
   main .wrapper .s-wrapper .k-wrapper .k-main .talking {
-    margin-bottom: 2em;
+    margin-bottom: 5em;
+    margin-top: 3em;
     position: relative;
   }
   main .wrapper .s-wrapper .k-wrapper .k-main .talking:before, main .wrapper .s-wrapper .k-wrapper .k-main .talking:after {
@@ -267,6 +271,7 @@
   }
   main .wrapper .s-wrapper .k-wrapper .k-main .talking-left, main .wrapper .s-wrapper .k-wrapper .k-main .talking-right {
     position: relative;
+    display: flex;
     padding: 10px;
     border-style: solid;
     /*枠線の線種*/
@@ -281,7 +286,6 @@
     margin: 0;
   }
   main .wrapper .s-wrapper .k-wrapper .k-main .talking-left {
-    float: left;
     border-width: 2px;
     /*枠線の太さ*/
     border-color: lightpink;
@@ -306,7 +310,6 @@
     left: -19px;
   }
   main .wrapper .s-wrapper .k-wrapper .k-main .talking-right {
-    float: right;
     border-width: 2px;
     /*枠線の太さ*/
     border-color: khaki;
@@ -387,6 +390,7 @@
     display: none;
   }
   body header .menu_wrapper .menu .menu-line {
+    display: none;
     width: 100%;
     height: 50px;
     background-color: bisque;
