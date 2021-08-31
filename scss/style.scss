@@ -16,6 +16,7 @@
   a {
     text-decoration: none;
     color: black;
+    display: block;
   }
 
     
@@ -32,6 +33,7 @@
           }
         }
         .menu {
+          display: none;
         nav {
         margin-bottom: 3em;
         // position: relative;
@@ -181,52 +183,40 @@
             flex-wrap: wrap;
             flex: 1;
             justify-content: space-around;
-            #post {
-              // margin-bottom: 30px;
-              margin: 5px 0 5px 0;
-              // margin: 30px auto;
-              // background-color: greenyellow;
-              width: 30%;
-              
-              .post-header {
-                margin-bottom: 15px;
-                
-                h2 {
-                  font-size: 16px;
-                  font-weight: bold;
-                  a {
-                    .okashi {
-                      width: 5%;
-                      height: auto;
+              #post {
+                margin: 5px 0 5px 0;
+                width: 30%;
+                .post-header {
+                  margin-bottom: 15px;
+                  h2 {
+                    font-size: 16px;
+                    font-weight: bold;
+                    .p_img {
+                      width: 5% ;
+                      height: auto ;
+                    }
+                    }
+                    .post-meta {
+                      font-size: 12px;
+                      padding: 7px 0;
+                      color: #555;
                     }
                   }
-                }
-                
-                .post-meta {
-                  font-size: 12px;
-                  padding: 7px 0;
-                  color: #555;
-                }
-              }
-              
-              .post-content {
-                overflow: hidden;
-                
-                .post-image {
-                  float: left;//後で直す
-                  width: 115px;
-                }
-                
-                // .post-body {
-                  //   margin-left: 115px;
-                  // }
+                  
+                  .post-content {
+                    overflow: hidden;
+                    
+                    .post-image {
+                      float: left;//後で直す
+                      width: 115px;
+                    }
+                  }
                 }
               }
             }
           }
-        }
-      }
-      
+    }
+          
       #sidebar {
         width: 10%;
         flex: 1;
@@ -469,6 +459,7 @@
                 // list-style: none;
                 // overflow: hidden;
                 // padding: 0;
+                display: none;
                 nav {
                   display: none;
                 }
